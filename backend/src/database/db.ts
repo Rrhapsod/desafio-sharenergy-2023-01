@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 export const connectDatabase = () => {
   console.log("Connecting database...");
 
+  mongoose.set("strictQuery", true);
   mongoose
     .connect(
       "mongodb+srv://renanrondon:mongo123@clusterrenan.kq4ixmm.mongodb.net/?retryWrites=true&w=majority"
