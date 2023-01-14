@@ -1,5 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors";
+import cors from "cors";
 
 import { Error } from "./utils/Error";
 import { connectDatabase } from "./database/db";
@@ -8,6 +9,7 @@ import { userRoutes } from "./routes/userRoutes";
 import { clientRoutes } from "./routes/clientRoutes";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const port = 3000;
