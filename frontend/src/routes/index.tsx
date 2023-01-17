@@ -2,15 +2,15 @@ import { BrowserRouter } from "react-router-dom";
 
 import { ContextType, useAuth } from "../hooks/auth";
 
-import { Home } from "../pages/Home";
 import { SignIn } from "../pages/SignIn";
+import { AppRoutes } from "./app.routes";
 
 export function Routes() {
   const { user }: ContextType = useAuth()
 
   return (
     <BrowserRouter>
-      {user ? <Home /> : <SignIn />}
+      {user ? <AppRoutes /> : <SignIn />}
     </BrowserRouter>
   );
 }
