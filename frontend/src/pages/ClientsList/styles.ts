@@ -14,15 +14,49 @@ export const Container = styled.div`
 
 export const Page = styled.div`
   grid-area: page;
-  margin: 0 12rem;
-  overflow-y: auto;
-  display: flex;
-  gap: 2.4rem;
-  justify-content: space-around;
+  margin: 4rem 8rem;
+`;
 
-  > div {
+export const Section = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 100rem;
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const Register = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+export const Details = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  > section {
     display: flex;
-    flex-direction: column;
     gap: 1rem;
+  }
+`;
+
+export const Clients = styled.div`
+  margin: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+
+  > a {
+    color: ${({ theme }) => theme.COLORS.ORANGE};
+  }
+
+  > a:hover {
+    color: red;
   }
 `;
