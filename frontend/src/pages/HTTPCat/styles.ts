@@ -14,15 +14,9 @@ export const Container = styled.div`
 
 export const Page = styled.div`
   grid-area: page;
-  margin: 0 12rem;
-  overflow-y: auto;
+  margin: 4rem auto;
+  max-width: 50rem;
   display: flex;
-  gap: 2.4rem;
-  justify-content: space-around;
-
-  > div {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+  flex-direction: column;
+  gap: 2rem;
 `;
